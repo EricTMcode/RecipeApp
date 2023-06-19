@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TapBar: View {
+struct ContentView: View {
     var body: some View {
         TabView {
             RecipeListView()
@@ -18,22 +18,22 @@ struct TapBar: View {
                 .tabItem {
                     Label("Categories", systemImage: "square.fill.text.grid.1x2")
                 }
-            RecipeListView()
+            FavoriteView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
                 }
-            RecipeListView()
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
         }
-        .tint(.mint)
+        .tint(.GreenMedium)
     }
 }
 
 struct TapBar_Previews: PreviewProvider {
     static var previews: some View {
-        TapBar()
+        ContentView()
             .environmentObject(RecipeListViewModel())
     }
 }

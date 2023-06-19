@@ -14,7 +14,9 @@
 		07A8B78B2A3F3D1000436696 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B78A2A3F3D1000436696 /* Bundle-Decodable.swift */; };
 		07A8B78D2A40725300436696 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B78C2A40725300436696 /* RecipeDetailView.swift */; };
 		07A8B78F2A4074F700436696 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B78E2A4074F700436696 /* TitleModifier.swift */; };
-		07A8B7912A407C3F00436696 /* TapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B7902A407C3F00436696 /* TapBar.swift */; };
+		07A8B7912A407C3F00436696 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B7902A407C3F00436696 /* ContentView.swift */; };
+		07A8B7932A407FB200436696 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B7922A407FB200436696 /* FavoriteView.swift */; };
+		07A8B7952A407FF500436696 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B7942A407FF500436696 /* SettingsView.swift */; };
 		07D5D99C2A3DDAA000E21F49 /* RecipeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5D99B2A3DDAA000E21F49 /* RecipeAppApp.swift */; };
 		07D5D99E2A3DDAA000E21F49 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5D99D2A3DDAA000E21F49 /* RecipeListView.swift */; };
 		07D5D9A02A3DDAA100E21F49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D5D99F2A3DDAA100E21F49 /* Assets.xcassets */; };
@@ -32,7 +34,9 @@
 		07A8B78A2A3F3D1000436696 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		07A8B78C2A40725300436696 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		07A8B78E2A4074F700436696 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
-		07A8B7902A407C3F00436696 /* TapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBar.swift; sourceTree = "<group>"; };
+		07A8B7902A407C3F00436696 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07A8B7922A407FB200436696 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		07A8B7942A407FF500436696 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		07D5D9982A3DDAA000E21F49 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D5D99B2A3DDAA000E21F49 /* RecipeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppApp.swift; sourceTree = "<group>"; };
 		07D5D99D2A3DDAA000E21F49 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
@@ -133,9 +137,11 @@
 		07D5D9AB2A3DDABE00E21F49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				07A8B7902A407C3F00436696 /* TapBar.swift */,
+				07A8B7902A407C3F00436696 /* ContentView.swift */,
 				07D5D99D2A3DDAA000E21F49 /* RecipeListView.swift */,
 				07A8B78C2A40725300436696 /* RecipeDetailView.swift */,
+				07A8B7922A407FB200436696 /* FavoriteView.swift */,
+				07A8B7942A407FF500436696 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 				07A8B7852A3F315800436696 /* Extension+Color.swift in Sources */,
 				07A8B7872A3F32B300436696 /* RecipeRating.swift in Sources */,
 				07A8B7822A3F2E4300436696 /* RecipeCard.swift in Sources */,
+				07A8B7952A407FF500436696 /* SettingsView.swift in Sources */,
 				07A8B78B2A3F3D1000436696 /* Bundle-Decodable.swift in Sources */,
+				07A8B7932A407FB200436696 /* FavoriteView.swift in Sources */,
 				07D5D9AF2A3DDB3800E21F49 /* Recipe.swift in Sources */,
-				07A8B7912A407C3F00436696 /* TapBar.swift in Sources */,
+				07A8B7912A407C3F00436696 /* ContentView.swift in Sources */,
 				07D5D99E2A3DDAA000E21F49 /* RecipeListView.swift in Sources */,
 				07D5D99C2A3DDAA000E21F49 /* RecipeAppApp.swift in Sources */,
 			);
