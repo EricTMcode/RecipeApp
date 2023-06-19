@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeCard: View {
     @EnvironmentObject var vm: RecipeListViewModel
+    @State private var showModal = false
     let recipe: Recipe
     
     var body: some View {
@@ -57,6 +58,12 @@ struct RecipeCard: View {
         .background(.white)
         .cornerRadius(12)
         .shadow(color: .BlackTransparentLight, radius: 8, x: 0, y: 0)
+        .onTapGesture {
+            showModal.toggle()
+        }
+        .sheet(isPresented: $showModal) {
+            RecipeDetailView(recipe: recipe)
+        }
     }
 }
 

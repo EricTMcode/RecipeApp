@@ -17,7 +17,6 @@ class RecipeListViewModel: ObservableObject {
     
     func getRecipes() {
         let url = Bundle.main.url(forResource: "recipes", withExtension: "json")!
-        
         do {
             let data = try Data(contentsOf: url)
             let recipes = try JSONDecoder().decode([Recipe].self, from: data)
