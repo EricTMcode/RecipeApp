@@ -16,21 +16,18 @@ class RecipeListViewModel: ObservableObject {
     }
     
     func getRecipes() {
-        let jsonURL = Bundle.main.url(forResource: "recipes", withExtension: "json")
+        let url = Bundle.main.url(forResource: "recipes", withExtension: "json")!
+        
         do {
-            let data = try Data(contentsOf: jsonURL!)
-            var recipes = try JSONDecoder().decode([Recipe].self, from: data)
-            
-            for index in 0..<recipes.count {
-                recipes[index].id = UUID()
-            }
+            let data = try Data(contentsOf: url)
+            let recipes = try JSONDecoder().decode([Recipe].self, from: data)
             self.recipes = recipes
         } catch {
             print("Couldn't parse local data")
         }
     }
     
-    func updateBookmark(forId: UUID?) {
+    func updateBookmark(forId: Int) {
         if let index = recipes.firstIndex(where: { $0.id == forId }) {
             recipes[index].bookmark.toggle()
         }

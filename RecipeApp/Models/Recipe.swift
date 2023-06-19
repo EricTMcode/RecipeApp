@@ -8,7 +8,7 @@
 import Foundation
 
 struct Recipe: Codable, Identifiable {
-    var id: UUID?
+    var id: Int
     var title: String
     var headline: String
     var bookmark: Bool
