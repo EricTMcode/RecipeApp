@@ -27,38 +27,8 @@ struct RecipeDetailView: View {
                     
                     RecipeRating(recipe: recipe)
                     RecipeCooking(recipe: recipe)
-                    
-                    TitleView(text: "Ingredients")
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        ForEach(recipe.ingredients, id: \.self) { item in
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(item)
-                                    .font(.footnote)
-                                    .multilineTextAlignment(.leading)
-                                Divider()
-                            }
-                        }
-                    }
-                    
-                    TitleView(text: "Instructions")
-                    
-                    ForEach(recipe.instructions, id: \.self) { item in
-                        VStack(alignment: .center, spacing: 5) {
-                            Image(systemName: "chevron.down.circle")
-                                .resizable()
-                                .frame(width: 42, height: 42)
-                                .imageScale(.large)
-                                .font(Font.title.weight(.ultraLight))
-                                .foregroundColor(.GreenAdaptive)
-                            
-                            Text(item)
-                                .lineLimit(nil)
-                                .multilineTextAlignment(.center)
-                                .font(.system(.body, design: .serif))
-                                .frame(minHeight: 100)
-                        }
-                    }
+                    IngredientsView(recipe: recipe)
+                    InstructionsView(recipe: recipe)
                     
                 }
                 .padding(.horizontal, 24)
@@ -94,17 +64,58 @@ struct RecipeDetailView: View {
     }
 }
 
-struct RecipeDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeDetailView(recipe: Recipe.example)
-    }
-}
-
 struct TitleView: View {
     var text: String
     var body: some View {
         Text(text)
             .bold()
             .modifier(TitleModifier())
+    }
+}
+
+struct IngredientsView: View {
+    let recipe: Recipe
+    var body: some View {
+        TitleView(text: "Ingredients")
+        VStack(alignment: .leading, spacing: 5) {
+            ForEach(recipe.ingredients, id: \.self) { item in
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(item)
+                        .font(.footnote)
+                        .multilineTextAlignment(.leading)
+                    Divider()
+                }
+            }
+        }
+    }
+}
+
+struct InstructionsView: View {
+    let recipe: Recipe
+    var body: some View {
+        TitleView(text: "Instructions")
+        
+        ForEach(recipe.instructions, id: \.self) { item in
+            VStack(alignment: .center, spacing: 5) {
+                Image(systemName: "chevron.down.circle")
+                    .resizable()
+                    .frame(width: 42, height: 42)
+                    .imageScale(.large)
+                    .font(Font.title.weight(.ultraLight))
+                    .foregroundColor(.GreenAdaptive)
+                
+                Text(item)
+                    .lineLimit(nil)
+                    .multilineTextAlignment(.center)
+                    .font(.system(.body, design: .serif))
+                    .frame(minHeight: 100)
+            }
+        }
+    }
+}
+
+struct RecipeDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecipeDetailView(recipe: Recipe.example)
     }
 }
