@@ -13,6 +13,10 @@ struct RecipeListView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 20) {
+                Text("Avocado Recipes")
+                    .bold()
+                    .modifier(TitleModifier())
+                
                 ForEach(vm.recipes) { recipe in
                     RecipeCard(recipe: recipe)
                 }

@@ -61,7 +61,7 @@ struct RecipeCard: View {
         .onTapGesture {
             showModal.toggle()
         }
-        .fullScreenCover(isPresented: $showModal) {
+        .sheet(isPresented: $showModal) {
             RecipeDetailView(recipe: recipe)
         }
     }
